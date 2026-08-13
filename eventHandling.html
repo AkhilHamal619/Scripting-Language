@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Event Handling</title>
+</head>
+<body>
+
+    <h2>JavaScript Event Handling</h2>
+
+    <!-- (a) Inline Event Handling -->
+    <button onclick="inlineEvent()">Inline Event</button>
+
+    <!-- (b) DOM Property Method -->
+    <button id="btn1">DOM Property</button>
+
+    <!-- (c) addEventListener() Method -->
+    <button id="btn2">addEventListener</button>
+
+    <br><br>
+
+    <!-- Keyboard & Form Events -->
+    <input type="text" id="txt" placeholder="Type here">
+
+    <form id="form">
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        // (a) Inline Event Handling
+        function inlineEvent() {
+            alert("Inline Event");
+        }
+
+        // (b) DOM Property Method
+        document.getElementById("btn1").onclick = function () {
+            alert("DOM Property Event");
+        };
+
+        // (c) addEventListener Method
+        let btn = document.getElementById("btn2");
+
+        btn.addEventListener("click", function () {
+            alert("Click Event");
+        });
+
+        // Mouse Events
+        btn.addEventListener("mouseover", function () {
+            btn.style.background = "yellow";
+        });
+
+        btn.addEventListener("mouseout", function () {
+            btn.style.background = "";
+        });
+
+        // Keyboard Events
+        let txt = document.getElementById("txt");
+
+        txt.addEventListener("keydown", function () {
+            console.log("Key Down");
+        });
+
+        txt.addEventListener("keyup", function () {
+            console.log("Key Up");
+        });
+
+        // Form Event
+        document.getElementById("form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            alert("Form Submitted");
+        });
+
+        // Window Events
+        window.addEventListener("load", function () {
+            console.log("Page Loaded");
+        });
+
+        window.addEventListener("resize", function () {
+            console.log("Window Resized");
+        });
+    </script>
+
+</body>
+</html>

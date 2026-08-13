@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nepal</title>
+       
+    </head>
+
+    <body>
+    <div id="container">
+        <button id="btn">CLick here</button>
+
+    </div>
+    <script>
+        let btn = document.getElementById("btn");
+
+        function displayMsg(){
+            console.log("Button CLicked");
+            
+        }
+        btn.addEventListener("click", displayMsg);
+
+        btn.removeEventListener("click", displayMsg);
+
+       
+    </script>
+    
+   </script>
+    </body>
+</html>

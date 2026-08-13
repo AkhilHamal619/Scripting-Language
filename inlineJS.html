@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inline JavaScript</title>
+</head>
+<body>
+ <h1>Inline JavaScript</h1>
+<p id="demo">Paragraph before click......</p>
+
+<button type="button" onclick="function1()">
+    Try it
+</button>
+
+<script>
+function function1() {
+    document.getElementById("demo").innerHTML =
+        "Paragraph after click.....";
+}
+</script>
+
+</body>
+</html>

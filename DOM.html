@@ -1,0 +1,152 @@
+<!--DOM in html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body>
+    <h1 id="heading">Hello World</h1>
+    <p class="para">This is a paragraph.</p>
+</body>
+</html>
+
+<!--Finding HTML Elements by Class Name-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessing DOM object by Class Name</title>
+</head>
+<body>
+    <p class="intro">This is first class</p>
+    <p class="intro">This is second class</p>
+    <p id="demo"></p>
+    <script>
+    x = document.getElementsByClassName("intro");
+    document.getElementById("demo").innerHTML =
+    'The first class text with index 1 is: ' + x[1].innerHTML;
+    </script>
+    
+</body>
+</html>
+
+<!--Finding HTML Elements by ID Name-->
+<!--getElementById is a method,
+while innerHTML is a property.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessing DOM object (BY ID)</title>
+</head>
+<body>
+    <h2>My first page</h2>
+    <p id="demo"></p>
+    <script>
+        document.getElementById("demo").innerHTML  = "Hello World!";
+    </script>
+</body>
+</html>
+
+<!--Finding HTML Elements by Tag Name-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessing DOM Object by Tag Name</title>
+</head>
+<body>
+
+    <p>This is first paragraph.</p>
+    <p>This is second paragraph.</p>
+
+    <!-- This paragraph will display the result -->
+    <p id="demo"></p>
+
+    <script>
+        // Select all <p> elements
+        const x = document.getElementsByTagName("p");
+
+        // Display the text of the first paragraph
+        document.getElementById("demo").innerHTML =
+            "The text in index 0 is: " + x[0].innerHTML;
+
+        // Try x[1].innerHTML to display the second paragraph.
+    </script>
+
+</body>
+</html>
+
+<!--DOM properties in HTML-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Properties Example</title>
+</head>
+<body>
+
+<h2 id="heading">Welcome</h2>
+
+<p id="demo">Hello World!</p>
+
+<input type="text" id="name" value="Akhil">
+
+<input type="checkbox" id="check" checked>
+
+<br><br>
+
+<img id="image" src="https://via.placeholder.com/150" width="150">
+
+<br><br>
+
+<a id="link" href="https://www.google.com">Google</a>
+
+<script>
+
+const heading = document.getElementById("heading");
+const demo = document.getElementById("demo");
+const name = document.getElementById("name");
+const check = document.getElementById("check");
+const image = document.getElementById("image");
+const link = document.getElementById("link");
+
+// innerHTML
+demo.innerHTML = "<b>Hello JavaScript!</b>";
+
+// textContent
+heading.textContent = "DOM Properties";
+
+// style
+heading.style.color = "blue";
+heading.style.backgroundColor = "yellow";
+
+// id
+console.log(demo.id);
+
+// className
+demo.className = "intro";
+
+// value
+console.log(name.value);
+
+// checked
+console.log(check.checked);
+
+// src
+console.log(image.src);
+
+// href
+console.log(link.href);
+
+// disabled
+name.disabled = true;
+
+</script>
+
+</body>
+</html>

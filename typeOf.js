@@ -1,0 +1,13 @@
+//typeof in JavaScript
+
+console.log("Akhil Hamal");
+console.log(typeof "john"); //Array
+console.log(typeof 3.14);
+console.log(typeof NaN);
+console.log(typeof false);
+console.log(typeof [1, 2, 3, 4]);
+console.log(typeof { name: "john", age: 34 });
+console.log(typeof new Date());
+console.log(typeof function () {});
+console.log(typeof myCar);
+console.log(typeof null);
