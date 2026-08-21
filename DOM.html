@@ -1,152 +1,226 @@
-<!--DOM in html-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document Object Model</title>
+    <title>DOM in JavaScript</title>
 </head>
+
 <body>
-    <h1 id="heading">Hello World</h1>
+
+    <p>Akhil Hamal</p>
+
+    <!-- ==========================================
+         1. Basic DOM Example
+         ========================================== -->
+
+    <h2 id="heading">Hello World</h2>
     <p class="para">This is a paragraph.</p>
-</body>
-</html>
 
-<!--Finding HTML Elements by Class Name-->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accessing DOM object by Class Name</title>
-</head>
-<body>
-    <p class="intro">This is first class</p>
-    <p class="intro">This is second class</p>
-    <p id="demo"></p>
+
+    <!-- ==========================================
+         2. Finding HTML Elements by Class Name
+         ========================================== -->
+
+    <h2>Finding Elements by Class Name</h2>
+
+    <p class="intro">This is the first class.</p>
+    <p class="intro">This is the second class.</p>
+
+    <p id="classResult"></p>
+
+
+    <!-- ==========================================
+         3. Finding HTML Elements by ID
+         ========================================== -->
+
+    <h2>Finding Elements by ID</h2>
+
+    <p id="idResult"></p>
+
+
+    <!-- ==========================================
+         4. Finding HTML Elements by Tag Name
+         ========================================== -->
+
+    <h2>Finding Elements by Tag Name</h2>
+
+    <p>This is the first paragraph.</p>
+    <p>This is the second paragraph.</p>
+
+    <p id="tagResult"></p>
+
+
+    <!-- ==========================================
+         5. DOM Properties
+         ========================================== -->
+
+    <h2 id="propertyHeading">Welcome</h2>
+
+    <p id="demo">Hello World!</p>
+
+    <input type="text" id="name" value="Akhil">
+
+    <input type="checkbox" id="check" checked>
+
+    <br><br>
+
+    <img
+        id="image"
+        src="https://via.placeholder.com/150"
+        width="150"
+        alt="Placeholder image"
+    >
+
+    <br><br>
+
+    <a
+        id="link"
+        href="https://www.google.com"
+    >
+        Google
+    </a>
+
+
+    <!-- ==========================================
+         JavaScript - DOM Manipulation
+         ========================================== -->
+
     <script>
-    x = document.getElementsByClassName("intro");
-    document.getElementById("demo").innerHTML =
-    'The first class text with index 1 is: ' + x[1].innerHTML;
+
+        // ==========================================
+        // Display Name
+        // ==========================================
+
+        console.log("Akhil Hamal");
+
+
+        // ==========================================
+        // 1. Finding Elements by Class Name
+        // ==========================================
+
+        const classElements =
+            document.getElementsByClassName("intro");
+
+        document.getElementById("classResult").innerHTML =
+            "Second class text: " + classElements[1].innerHTML;
+
+
+        // ==========================================
+        // 2. Finding Element by ID
+        // ==========================================
+
+        document.getElementById("idResult").innerHTML =
+            "Hello World!";
+
+
+        // ==========================================
+        // 3. Finding Elements by Tag Name
+        // ==========================================
+
+        const paragraphs =
+            document.getElementsByTagName("p");
+
+        document.getElementById("tagResult").innerHTML =
+            "First paragraph: " + paragraphs[0].innerHTML;
+
+
+        // ==========================================
+        // 4. DOM Properties
+        // ==========================================
+
+        const heading =
+            document.getElementById("propertyHeading");
+
+        const demo =
+            document.getElementById("demo");
+
+        const name =
+            document.getElementById("name");
+
+        const check =
+            document.getElementById("check");
+
+        const image =
+            document.getElementById("image");
+
+        const link =
+            document.getElementById("link");
+
+
+        // ------------------------------------------
+        // innerHTML
+        // ------------------------------------------
+
+        demo.innerHTML = "<b>Hello JavaScript!</b>";
+
+
+        // ------------------------------------------
+        // textContent
+        // ------------------------------------------
+
+        heading.textContent = "DOM Properties";
+
+
+        // ------------------------------------------
+        // style
+        // ------------------------------------------
+
+        heading.style.color = "blue";
+        heading.style.backgroundColor = "yellow";
+
+
+        // ------------------------------------------
+        // id
+        // ------------------------------------------
+
+        console.log("ID:", demo.id);
+
+
+        // ------------------------------------------
+        // className
+        // ------------------------------------------
+
+        demo.className = "intro";
+
+        console.log("Class:", demo.className);
+
+
+        // ------------------------------------------
+        // value
+        // ------------------------------------------
+
+        console.log("Input value:", name.value);
+
+
+        // ------------------------------------------
+        // checked
+        // ------------------------------------------
+
+        console.log("Checkbox checked:", check.checked);
+
+
+        // ------------------------------------------
+        // src
+        // ------------------------------------------
+
+        console.log("Image source:", image.src);
+
+
+        // ------------------------------------------
+        // href
+        // ------------------------------------------
+
+        console.log("Link:", link.href);
+
+
+        // ------------------------------------------
+        // disabled
+        // ------------------------------------------
+
+        name.disabled = true;
+
     </script>
-    
-</body>
-</html>
-
-<!--Finding HTML Elements by ID Name-->
-<!--getElementById is a method,
-while innerHTML is a property.-->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accessing DOM object (BY ID)</title>
-</head>
-<body>
-    <h2>My first page</h2>
-    <p id="demo"></p>
-    <script>
-        document.getElementById("demo").innerHTML  = "Hello World!";
-    </script>
-</body>
-</html>
-
-<!--Finding HTML Elements by Tag Name-->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accessing DOM Object by Tag Name</title>
-</head>
-<body>
-
-    <p>This is first paragraph.</p>
-    <p>This is second paragraph.</p>
-
-    <!-- This paragraph will display the result -->
-    <p id="demo"></p>
-
-    <script>
-        // Select all <p> elements
-        const x = document.getElementsByTagName("p");
-
-        // Display the text of the first paragraph
-        document.getElementById("demo").innerHTML =
-            "The text in index 0 is: " + x[0].innerHTML;
-
-        // Try x[1].innerHTML to display the second paragraph.
-    </script>
-
-</body>
-</html>
-
-<!--DOM properties in HTML-->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>DOM Properties Example</title>
-</head>
-<body>
-
-<h2 id="heading">Welcome</h2>
-
-<p id="demo">Hello World!</p>
-
-<input type="text" id="name" value="Akhil">
-
-<input type="checkbox" id="check" checked>
-
-<br><br>
-
-<img id="image" src="https://via.placeholder.com/150" width="150">
-
-<br><br>
-
-<a id="link" href="https://www.google.com">Google</a>
-
-<script>
-
-const heading = document.getElementById("heading");
-const demo = document.getElementById("demo");
-const name = document.getElementById("name");
-const check = document.getElementById("check");
-const image = document.getElementById("image");
-const link = document.getElementById("link");
-
-// innerHTML
-demo.innerHTML = "<b>Hello JavaScript!</b>";
-
-// textContent
-heading.textContent = "DOM Properties";
-
-// style
-heading.style.color = "blue";
-heading.style.backgroundColor = "yellow";
-
-// id
-console.log(demo.id);
-
-// className
-demo.className = "intro";
-
-// value
-console.log(name.value);
-
-// checked
-console.log(check.checked);
-
-// src
-console.log(image.src);
-
-// href
-console.log(link.href);
-
-// disabled
-name.disabled = true;
-
-</script>
 
 </body>
 </html>

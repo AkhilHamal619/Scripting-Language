@@ -1,67 +1,105 @@
-//Arithmetic Operators in JS
-let x = 3, y = 5; //Addition
-let z = x + y;
-console.log("Akhil Hamal");
-console.log(z);
-
-x = 6, y = 3; //Subtraction
-z = x - y;
-console.log(z);
-
-x = 5, y = 1; //Multiplication
-z = x * y;
-console.log(z);
-
-x = 5, y = 1; //Divison
-z = x / y;
-console.log(z);
-
-let ab=0xAB;   //0x followed by Hexadecimal numbers 
-console.log(ab);
-
-
-
-//Assignment Operator in JavaScript
-x = 1, y = 15;
-z = 15;
-
-x <<= 3;
-y >>= 3;
-z >>>= 2;
+// ==========================================
+// OPERATORS IN JAVASCRIPT
+// ==========================================
 
 console.log("Akhil Hamal");
-console.log("Value of x is: " + x);
-console.log("Value of y is: " + y);
-console.log("Value of z is: " + z);
 
 
-//Logical Operator in JS
-const name = "Akhil Hamal";
+// ==========================================
+// ARITHMETIC OPERATORS
+// ==========================================
+
+console.log("\n--- Arithmetic Operators ---");
+
+let x = 3;
+let y = 5;
+
+console.log("Addition:", x + y);
 
 x = 6;
 y = 3;
 
-console.log(`${name}`);
-console.log(`(x < 10 && y > 1): ${x < 10 && y > 1}`);
-console.log(`(x < 10 && y < 1): ${x < 10 && y < 1}`);
+console.log("Subtraction:", x - y);
+
+x = 5;
+y = 1;
+
+console.log("Multiplication:", x * y);
+console.log("Division:", x / y);
+
+// Hexadecimal number
+const hexNumber = 0xAB;
+
+console.log("Hexadecimal 0xAB:", hexNumber);
 
 
-//ternary operator in JS
+// ==========================================
+// ASSIGNMENT OPERATORS
+// ==========================================
+
+console.log("\n--- Assignment Operators ---");
+
+let a = 1;
+let b = 15;
+let c = 15;
+
+a <<= 3;   // a = a << 3
+b >>= 3;   // b = b >> 3
+c >>>= 2;  // c = c >>> 2
+
+console.log("a <<= 3:", a);
+console.log("b >>= 3:", b);
+console.log("c >>>= 2:", c);
+
+
+// ==========================================
+// LOGICAL OPERATORS
+// ==========================================
+
+console.log("\n--- Logical Operators ---");
+
+const name = "Akhil Hamal";
+x = 6;
+y = 3;
+
+console.log("Name:", name);
+
+console.log(
+    "x < 10 && y > 1:",
+    x < 10 && y > 1
+);
+
+console.log(
+    "x < 10 && y < 1:",
+    x < 10 && y < 1
+);
+
+
+// ==========================================
+// TERNARY OPERATOR
+// ==========================================
+
+console.log("\n--- Ternary Operator ---");
+
 function checkAge(age) {
-    const voteable = (age < 18) ? "Too young" : "Old enough";
-    return voteable + " to vote.";
+    const result = age < 18 ? "Too young" : "Old enough";
+    return result + " to vote.";
 }
 
-
-// example usage
-console.log("Akhil Hamal");
-console.log(checkAge(18));
-console.log(checkAge(15));
+console.log("Age 18:", checkAge(18));
+console.log("Age 15:", checkAge(15));
 
 
-//Comaprison Operators in JS
-name = "Akhil Hamal";
-x = 5;
+// ==========================================
+// COMPARISON OPERATORS
+// ==========================================
 
-console.log(`${name}`);
-console.log(`Is x equal to 8? ${x == 8}`);
+console.log("\n--- Comparison Operators ---");
+
+const age = 5;
+
+console.log("Is age equal to 8?", age == 8);
+console.log("Is age strictly equal to 8?", age === 8);
+console.log("Is age not equal to 8?", age != 8);
+console.log("Is age greater than 3?", age > 3);
+console.log("Is age less than 8?", age < 8);

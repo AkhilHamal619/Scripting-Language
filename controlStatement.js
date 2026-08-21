@@ -1,18 +1,32 @@
-//for Loop
+// ==========================================
+// Control Statements and Loops in JavaScript
+// ==========================================
+
 console.log("Akhil Hamal");
-for(let i=1; i<=5; i++)
-{
+
+
+// ==========================================
+// 1. For Loop
+// ==========================================
+
+// Prints numbers from 1 to 5.
+
+for (let i = 1; i <= 5; i++) {
     console.log(i);
 }
 
-//If and If-else in javascript
 
-// Name
+// ==========================================
+// 2. If Statement
+// ==========================================
+
+// Storing a name
 const name = "Akhil Hamal";
 
-console.log(`${name}`);
+console.log(`Name: ${name}`);
 
-// IF statement only
+
+// Checking the current time
 const currentHour = new Date().getHours();
 
 if (currentHour < 18) {
@@ -21,80 +35,147 @@ if (currentHour < 18) {
 
 console.log("Welcome to the program!");
 
-// IF-ELSE statement
-const proceed = confirm("Do you want to proceed?");
 
-if (proceed) {
-    console.log("User chose to proceed.");
-    window.location.href = "https://www.google.com/";
-} else {
-    console.log("User chose not to proceed.");
-    window.location.href = "https://www.facebook.com/";
-}
+// ==========================================
+// 3. If-Else Statement
+// ==========================================
 
-//while Loop
-console.log("Akhil Hamal");
-let i = 1;
+// Node.js does not have the browser's confirm() function.
+// We use readline to get input from the user.
 
-while (i <= 5) {
-    console.log(i);
-    i++;
-}
+const readline = require("readline");
 
-//if...else if...else statement
-function change_color()
-{
-    if (document.bgColor == '#0000ff')
-        document.bgColor = '#00ff00';
-    else if (document.bgColor == '#00ff00')
-        document.bgColor = '#ff0000';
-    else
-        document.bgColor = '#0000ff';
-}
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
 
-//Switch Case Statement
-let day;
+rl.question("Do you want to proceed? (yes/no): ", (answer) => {
 
-switch (new Date().getDay()) {
-    case 0:
-        day = "Sunday";
-        break;
-    case 1:
-        day = "Monday";
-        break;
-    case 2:
-        day = "Tuesday";
-        break;
-    case 3:
-        day = "Wednesday";
-        break;
-    case 4:
-        day = "Thursday";
-        break;
-    case 5:
-        day = "Friday";
-        break;
-    case 6:
-        day = "Saturday";
-        break;
-}
+    if (answer.toLowerCase() === "yes") {
+        console.log("User chose to proceed.");
+        console.log("You would be redirected to Google in a browser.");
+    } else {
+        console.log("User chose not to proceed.");
+        console.log("You would be redirected to Facebook in a browser.");
+    }
 
-console.log("Akhil Hamal");
-console.log("Today is " + day);
+    rl.close();
 
-//do while loop in JS
-console.log("Akhil Hamal");
-i = 1;
 
-do {
-    console.log(i);
-    i++;
-} while (i <= 5);
+// ==========================================
+// 4. While Loop
+// ==========================================
 
-//infinite Loop in js
-console.log("Akhil Hamal");
-i = 1;
+// Prints numbers from 1 to 5.
 
-while (i <= 5) {
-    console.log(i);
-}
+    let i = 1;
+
+    while (i <= 5) {
+        console.log(i);
+        i++;
+    }
+
+
+// ==========================================
+// 5. If...Else If...Else Statement
+// ==========================================
+
+// Changes a color value based on the current color.
+
+    let backgroundColor = "#0000ff";
+
+    function changeColor() {
+        if (backgroundColor === "#0000ff") {
+            backgroundColor = "#00ff00";
+        } else if (backgroundColor === "#00ff00") {
+            backgroundColor = "#ff0000";
+        } else {
+            backgroundColor = "#0000ff";
+        }
+
+        console.log("Background color:", backgroundColor);
+    }
+
+    console.log("Current color:", backgroundColor);
+
+    changeColor();
+    changeColor();
+    changeColor();
+
+
+// ==========================================
+// 6. Switch Case Statement
+// ==========================================
+
+// Get the current day of the week.
+
+    let day;
+
+    switch (new Date().getDay()) {
+        case 0:
+            day = "Sunday";
+            break;
+
+        case 1:
+            day = "Monday";
+            break;
+
+        case 2:
+            day = "Tuesday";
+            break;
+
+        case 3:
+            day = "Wednesday";
+            break;
+
+        case 4:
+            day = "Thursday";
+            break;
+
+        case 5:
+            day = "Friday";
+            break;
+
+        case 6:
+            day = "Saturday";
+            break;
+    }
+
+    console.log("Today is " + day);
+
+
+// ==========================================
+// 7. Do-While Loop
+// ==========================================
+
+// The do-while loop executes at least once
+// before checking the condition.
+
+    i = 1;
+
+    do {
+        console.log(i);
+        i++;
+    } while (i <= 5);
+
+
+// ==========================================
+// 8. Infinite Loop
+// ==========================================
+
+// WARNING:
+// This creates an infinite loop because
+// i is never increased.
+//
+// DO NOT RUN THIS CODE.
+
+/*
+    i = 1;
+
+    while (i <= 5) {
+        console.log(i);
+    }
+*/
+
+});

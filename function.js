@@ -1,87 +1,127 @@
-//Simple Function in JavaScript
-let x = myFunction(4, 3);
+// ==========================================
+// FUNCTIONS IN JAVASCRIPT
+// ==========================================
+
+// Simple Function
+function multiplyNumbers(a, b) {
+    return a * b;
+}
+
+let x = multiplyNumbers(4, 3);
 
 console.log("Akhil Hamal");
 console.log(x);
 
-function myFunction(a, b) {
-    return a * b;
+
+// ==========================================
+// FUNCTION CALL
+// ==========================================
+
+function greet() {
+    console.log("My name is Akhil Hamal");
 }
 
-//function call 
-function akhil()
-{
-    console.log("My name is Akhil Hamal");  
-}
-akhil();
+greet();
 
-//function with parameters
-function akhil1(name, age)
-{
-    console.log("My name is " + name + " and I am " + age + " years old.");  
-}
-akhil1("Akhil Hamal", 20);
 
-//function with return value
-function akhil2(name, age)
-{
-    return "My name is " + name + " and I am " + age + " years old.";  
-}
-console.log(akhil2("Akhil Hamal", 20));
+// ==========================================
+// FUNCTION WITH PARAMETERS
+// ==========================================
 
-//function with default parameters
-function akhil3(name = "Akhil Hamal", age = 20)
-{
-    return "My name is " + name + " and I am " + age + " years old.";  
+function introduce(name, age) {
+    console.log(`My name is ${name} and I am ${age} years old.`);
 }
-console.log(akhil3());
-console.log(akhil3("John Doe", 25));
 
-//function to add
-function add(a, b)
-{
+introduce("Akhil Hamal", 20);
+
+
+// ==========================================
+// FUNCTION WITH RETURN VALUE
+// ==========================================
+
+function introduction(name, age) {
+    return `My name is ${name} and I am ${age} years old.`;
+}
+
+console.log(introduction("Akhil Hamal", 20));
+
+
+// ==========================================
+// FUNCTION WITH DEFAULT PARAMETERS
+// ==========================================
+
+function defaultIntroduction(name = "Akhil Hamal", age = 20) {
+    return `My name is ${name} and I am ${age} years old.`;
+}
+
+console.log(defaultIntroduction());
+console.log(defaultIntroduction("John Doe", 25));
+
+
+// ==========================================
+// ARITHMETIC FUNCTIONS
+// ==========================================
+
+// Addition
+function add(a, b) {
     return a + b;
 }
 
-add(5, 10);
+console.log("Addition:", add(5, 10));
 
-//function to subtract
-function subtract(a, b)
-{
+
+// Subtraction
+function subtract(a, b) {
     return a - b;
-
 }
-subtract(10, 5);
 
-//function to multiply
-function multiply(a, b)
-{
+console.log("Subtraction:", subtract(10, 5));
+
+
+// Multiplication
+function multiply(a, b) {
     return a * b;
 }
-multiply(5, 10);
 
-//function to divide
-function divide(a, b)
-{
+console.log("Multiplication:", multiply(5, 10));
+
+
+// Division
+function divide(a, b) {
     return a / b;
 }
-divide(10, 5);
 
-//arrow functions
-myFunction = (a, b) => a * b;
+console.log("Division:", divide(10, 5));
 
-let result = myFunction(4, 3);
-console.log(result);
 
-//this in functions
-function myFunction1() {
+// ==========================================
+// ARROW FUNCTION
+// ==========================================
+
+const multiplyArrow = (a, b) => a * b;
+
+let result = multiplyArrow(4, 3);
+
+console.log("Arrow Function Result:", result);
+
+
+// ==========================================
+// 'this' IN REGULAR FUNCTIONS
+// ==========================================
+
+function regularThis() {
     console.log(this);
 }
-myFunction1();
 
-//this in arrow functions
-const myFunction2 = () => {
+regularThis();
+
+
+// ==========================================
+// 'this' IN ARROW FUNCTIONS
+// ==========================================
+
+const arrowThis = () => {
     console.log(this);
-}
-myFunction2();
+};
 
+arrowThis();

@@ -1,66 +1,93 @@
-//length String
-const name = "Akhil Hamal";
+// ==========================================
+// STRING METHODS IN JAVASCRIPT
+// ==========================================
 
+console.log("Akhil Hamal");
+
+
+// ==========================================
+// STRING LENGTH
+// ==========================================
+
+const name = "Akhil Hamal";
 const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-console.log(`${name}`);
-console.log(`Length of the string: ${alphabet.length}`);
+console.log("Name:", name);
+console.log("Alphabet Length:", alphabet.length);
 
-// split() in JavaScript
 
-name = "Akhil Hamal";
+// ==========================================
+// split() METHOD
+// ==========================================
 
-let text = "a,b,c,d,e,f";
-
+const text = "a,b,c,d,e,f";
 const myArray = text.split(",");
 
-console.log(`${name}`);
-console.log(myArray[1]);
+console.log("\n--- split() ---");
+console.log("Array:", myArray);
+console.log("Second Element:", myArray[1]);
 
-//String Slice
-const str = "Apple, Banana, Kiwi";
 
-const demo1 = str.slice(7, 12);
-const demo2 = str.slice(-12, -6);
-const demo3 = str.substr(7, 6); // outdated but still works in many browsers
+// ==========================================
+// STRING SLICE
+// ==========================================
 
-console.log("Akhil Hamal");
-console.log("slice(7,12):", demo1);
-console.log("slice(-12,-6):", demo2);
-console.log("substr(7,6):", demo3);
+const fruits = "Apple, Banana, Kiwi";
 
-//str.trim() removes whitespace from both the beginning and end of a string.
-str = "    Hello   World    ";
+const slice1 = fruits.slice(7, 12);
+const slice2 = fruits.slice(-12, -6);
 
-let trimmedStr = str.trim();
+console.log("\n--- slice() ---");
+console.log("slice(7, 12):", slice1);
+console.log("slice(-12, -6):", slice2);
 
-console.log(trimmedStr);
 
-//String substr() method extracts a part of a string and returns it as a new string, without modifying the original string.
-str = "Apple, Banana, Kiwi";
+// ==========================================
+// substr() METHOD
+// ==========================================
+// Deprecated, but shown for learning purposes.
 
-const result = str.substr(7, 6); // deprecated but still works
+const substrResult = fruits.substr(7, 6);
 
-console.log("Akhil Hamal");
-console.log("Result:", result);
+console.log("\n--- substr() ---");
+console.log("substr(7, 6):", substrResult);
 
-//String Uppercase Lowercase
 
-console.log("Akhil Hamal");
-text = "Hello World";
+// ==========================================
+// trim() METHOD
+// ==========================================
 
-const upper = text.toUpperCase();
-const lower = text.toLowerCase();
+const textWithSpaces = "    Hello World    ";
+const trimmedText = textWithSpaces.trim();
 
-console.log("Original text:", text);
-console.log("upper case:", upper);
-console.log("lower case:", lower);
+console.log("\n--- trim() ---");
+console.log("Before:", `"${textWithSpaces}"`);
+console.log("After:", `"${trimmedText}"`);
 
-//String concatenation in JavaScript
-let text1 = "Muna";
-let text2 = "Madan";
 
-let text3 = text1.concat(" ", text2);
+// ==========================================
+// UPPERCASE AND LOWERCASE
+// ==========================================
 
-console.log("Akhil Hamal");
-console.log(text3);
+const message = "Hello World";
+
+const upperCase = message.toUpperCase();
+const lowerCase = message.toLowerCase();
+
+console.log("\n--- Case Conversion ---");
+console.log("Original:", message);
+console.log("Uppercase:", upperCase);
+console.log("Lowercase:", lowerCase);
+
+
+// ==========================================
+// STRING CONCATENATION
+// ==========================================
+
+const text1 = "Muna";
+const text2 = "Madan";
+
+const text3 = text1.concat(" ", text2);
+
+console.log("\n--- concat() ---");
+console.log("Result:", text3);

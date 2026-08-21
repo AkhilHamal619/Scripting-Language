@@ -1,87 +1,128 @@
-//built-in objects / global objects in JavaScript
+// ==========================================
+// BUILT-IN / GLOBAL OBJECTS IN JAVASCRIPT
+// ==========================================
 
-//math object in JavaScript
 console.log("Akhil Hamal");
-console.log(Math.PI);
-console.log(Math.round(4.7));
-console.log(Math.ceil(4.4));
-console.log(Math.floor(4.7));
-console.log(Math.sqrt(64));
-console.log(Math.abs(-4.7));
-console.log(Math.pow(8, 2));
-console.log(Math.min(0, 150, 30, 20, -8, -200));
-console.log(Math.max(0, 150, 30, 20, -8, -200));
 
-//date object in JavaScript
-const d = new Date();
-console.log(d);
-console.log(d.getFullYear());
-console.log(d.getMonth());
-console.log(d.getDate());
-console.log(d.getDay());
-console.log(d.getHours());
-console.log(d.getMinutes());
-console.log(d.getSeconds());
 
-//string object in JavaScript
-let text = "Akhil Hamal";
-console.log(text.length);
-console.log(text.toUpperCase());
-console.log(text.toLowerCase());
-console.log(text.charAt(0));
-console.log(text.indexOf("H"));
-console.log(text.lastIndexOf("a"));
-console.log(text.slice(0, 5));
-console.log(text.replace("Akhil", "John"));
+// Math Object
+console.log("\n--- Math Object ---");
 
-//number object in JavaScript
-let num = 123.456;
-console.log(num.toString());
-console.log(num.toFixed(2));
-console.log(num.toPrecision(4));
+console.log(
+    Math.PI,
+    Math.round(4.7),
+    Math.ceil(4.4),
+    Math.floor(4.7),
+    Math.sqrt(64)
+);
 
-//array object in JavaScript
+console.log(
+    Math.abs(-4.7),
+    Math.pow(8, 2),
+    Math.min(0, 150, 30, 20, -8, -200),
+    Math.max(0, 150, 30, 20, -8, -200)
+);
+
+
+// Date Object
+console.log("\n--- Date Object ---");
+
+const date = new Date();
+
+console.log("Date:", date.toLocaleDateString());
+console.log(
+    "Year:", date.getFullYear(),
+    "Month:", date.getMonth() + 1,
+    "Day:", date.getDate()
+);
+
+
+// String Object
+console.log("\n--- String Object ---");
+
+const text = "Akhil Hamal";
+
+console.log(
+    "Length:", text.length,
+    "| Upper:", text.toUpperCase(),
+    "| Lower:", text.toLowerCase()
+);
+
+console.log(
+    "First:", text.charAt(0),
+    "| H Index:", text.indexOf("H"),
+    "| Slice:", text.slice(0, 5)
+);
+
+
+// Number Object
+console.log("\n--- Number Object ---");
+
+const num = 123.456;
+
+console.log(
+    "String:", num.toString(),
+    "| Fixed:", num.toFixed(2),
+    "| Precision:", num.toPrecision(4)
+);
+
+
+// Array Object
+console.log("\n--- Array Object ---");
+
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
-console.log(fruits.length);
-console.log(fruits[0]);
-console.log(fruits[fruits.length - 1]);
+
 fruits.push("Kiwi");
-console.log(fruits);
 fruits.pop();
-console.log(fruits);
 fruits.shift();
-console.log(fruits);
 fruits.unshift("Lemon");
-console.log(fruits);
 
-//JSON object in JavaScript
-const person = { name: "Akhil", age: 25, city: "Kathmandu" };
-const myJSON = JSON.stringify(person);
-console.log(myJSON);
+console.log("Fruits:", fruits);
+console.log("Length:", fruits.length);
 
-const myObj = JSON.parse(myJSON);
-console.log(myObj.name);
-console.log(myObj.age);
-console.log(myObj.city);
 
-//RegExp Object (Regular Expressions) in JavaScript
+// JSON Object
+console.log("\n--- JSON Object ---");
+
+const person = {
+    name: "Akhil",
+    age: 25,
+    city: "Kathmandu"
+};
+
+const jsonData = JSON.stringify(person);
+const myObj = JSON.parse(jsonData);
+
+console.log("JSON:", jsonData);
+console.log("Name:", myObj.name, "| Age:", myObj.age);
+
+
+// RegExp Object
+console.log("\n--- RegExp Object ---");
+
 const pattern = /Akhil/;
-const str1 = "My name is Akhil Hamal";
-console.log(pattern.test(str1));
-console.log(str1.match(pattern));
-console.log(str1.search(pattern));
-console.log(str1.replace(pattern, "John"));
+const sentence = "My name is Akhil Hamal";
 
-//Error Object in JavaScript
+console.log(
+    "Test:", pattern.test(sentence),
+    "| Search:", sentence.search(pattern)
+);
+
+
+// Error Object
+console.log("\n--- Error Object ---");
+
 try {
-    throw new Error("This is a custom error message.");
-} catch (e) {
-    console.log(e.message);
-}       
+    throw new Error("Custom error message");
+} catch (error) {
+    console.log(error.message);
+}
 
-//boolean object in JavaScript
+
+// Boolean
+console.log("\n--- Boolean ---");
+
 const isTrue = true;
 const isFalse = false;
-console.log(isTrue);
-console.log(isFalse);
 
+console.log(isTrue, isFalse);
