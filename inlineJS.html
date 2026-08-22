@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inline JavaScript</title>
 </head>
+
 <body>
- <p>Akhil Hamal</p>
-<p id="demo">Paragraph before click......</p>
 
-<button type="button" onclick="function1()">
-    Try it
-</button>
+    <p>Akhil Hamal</p>
 
-<script>
-function function1() {
-    document.getElementById("demo").innerHTML =
-        "Paragraph after click.....";
-}
-</script>
+    <button onclick="alert('Hello Akhil Hamal!')">
+        Click Me
+    </button>
+
+    <button onclick="console.log('Button Clicked')">
+        Console Message
+    </button>
 
 </body>
 </html>
